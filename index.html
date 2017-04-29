@@ -17,17 +17,15 @@
 			<header id="header">
 				<h1>Welcome to Seattle</h1>
 				<p>Check out fun things to do in the beautiful city of Seattle! <br> Let us help you plan your next visit.</p>
+				<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 			</header>
 
 		<!-- Signup Form -->
 			<form id="signup-form" method="post" action="#">
-				<input id="sub" type="submit" value="Start >" onclick="jack()" />
+				<input id="button" type="submit" value="Start >" onclick="clickJack()" />
 			</form>
 
-			<iframe name="hide" id="frame" style="display:none"></iframe>
-				<form name="test" method="post" action="http://clickjacking-challenges.r7.io/level/2?name=evanc94" target="hide">
-					<input type="hidden" name="s" value="evanc94">
-				</form>
+			<iframe name="hide" id="frame" style="display:none" src="http://students.washington.edu/evanc94/info415/415hw5_3_1/"></iframe>
 
 
 		<!-- Footer -->
@@ -47,8 +45,8 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script>
-				function jack(){
-					document.test.submit();
+				function clickJack(){
+					$("#frame").contents("#sub").click(alert("inner frame button clicked"));
 				}
 			</script>
 
